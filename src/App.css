@@ -14,3 +14,7 @@
     padding: 30px 50px;
     margin: 20px 0;
   }
+.selected{
+  color: white;
+  font-weight: bold;
+}

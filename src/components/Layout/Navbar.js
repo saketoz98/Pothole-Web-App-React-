@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Layout, Menu, Icon } from 'antd';
+import { NavLink } from 'react-router-dom';
+
 const {
     Header, Content, Footer, Sider,
   } = Layout;
@@ -17,8 +19,8 @@ export class Navbar extends Component {
         <div className="logo" />
         <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
             <Menu.Item key="1">
-            <Icon type="user" />
-            <span className="nav-text">nav 1</span>
+            <Icon type="home" />
+            <span className="nav-text"><NavLink to="/" activeClassName="selected">Home</NavLink></span>
             </Menu.Item>
             <Menu.Item key="2">
             <Icon type="video-camera" />
