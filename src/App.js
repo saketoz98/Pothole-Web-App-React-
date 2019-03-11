@@ -4,16 +4,24 @@ import Navbar from './components/Layout/Navbar';
 import { Route, Switch } from 'react-router-dom';
 import Index from './components/Layout/Index';
 import Complaint from './components/Layout/Complaint';
+import LoginPage from './components/Layout/LoginPage';
+import Register from './components/Layout/Register';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
 class App extends Component {
   render() {
     return (
-      <Navbar>
-        <Switch>       
-          <Route exact path="/" component = {Index} />
-          <Route exact path="/complaints/:id" component = {Complaint} />
-        </Switch>
-      </Navbar>
+      <div>
+          <Switch>  
+              <PrivateRoute exact path="/register" component = {Register} />
+              <PrivateRoute exact path="/complaints/:id" component = {Complaint} />
+
+              <PrivateRoute exact path="/complaints" component = {Index} />
+              <PublicRoute exact path="/" component = {LoginPage} />
+          </Switch>
+
+      </div>
       
       
     );

@@ -9,6 +9,7 @@
     "customize-cra": "^0.2.12",
     "firebase": "^5.8.5",
     "google-maps-react": "^2.0.2",
+    "history": "^4.7.2",
     "react": "^16.8.4",
     "react-app-rewired": "^2.1.0",
     "react-dom": "^16.8.4",

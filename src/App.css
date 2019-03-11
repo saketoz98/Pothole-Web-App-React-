@@ -18,3 +18,42 @@
   color: white;
   font-weight: bold;
 }
+
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+}
+.subtitle {
+  color: aliceblue;
+
+}
+
+.box-layout {
+  align-items: center;
+  background: url('bg.jpg');
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.box-layout__box {
+  background: fade-out(white, .15);
+  border-radius: 3px;
+  padding: 3.2rem 1.6rem;
+  text-align: center;
+  width: 25rem;
+}
+
+.box-layout__title {
+  color: aliceblue;
+  margin: 0 0 1.6rem 0;
+  line-height: 1;
+}
+
