@@ -18,7 +18,7 @@ export class FormContainer extends Component {
           filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           onChange = {this.props.handleStatusChange}
         >
-          <Option value="Submitted">Submitted</Option>
+          <Option value="Submitted">Unattended</Option>
           <Option value="In Process">In Process</Option>
           <Option value="Completed">Completed</Option>
         </Select>

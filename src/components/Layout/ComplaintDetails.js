@@ -13,7 +13,7 @@ export class ComplaintDetails extends Component {
         visible: false,
         confirmLoading: false,
         complaint : {...this.props.details},
-        status : ""
+        status : "",
       }
     showModal = () => {
         this.setState({
@@ -55,7 +55,10 @@ export class ComplaintDetails extends Component {
           visible: false,
         });
       }
-    
+    totalMass = (value)=>{
+        const mass = value*0.04*0.002243;
+        return mass;
+    }
     render() {
         console.log("details",this.state.complaint)
     return (
@@ -64,15 +67,15 @@ export class ComplaintDetails extends Component {
             <Col span={12}>
                 <Card
                     hoverable
-                    style={{ width: 240 }}
+                    style={{ width: 400 }}
                     cover={<img alt="example" src={this.props.details.pic_url}/>}
                 >
                     <Meta
                     title="Complaint Details"
                     description={
                         <div>
-                            <Desc desc={this.state.complaint}  />
-                            <Button type="primary" onClick={this.showModal}>
+                            <Desc desc={this.state.complaint} massfn = {this.totalMass} />
+                            <Button type="primary" style={{marginTop:10}} onClick={this.showModal}>
                                 Change Status
                             </Button>
                             <Modal

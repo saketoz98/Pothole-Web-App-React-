@@ -101,6 +101,7 @@ class ComplaintsTable extends React.Component {
     ];
       return (
         <div>
+            Complaints
             <Table columns={columns} dataSource={this.props.data} 
                 onRow={(record, rowIndex) => {
                 return {

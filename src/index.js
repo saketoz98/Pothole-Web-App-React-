@@ -31,6 +31,7 @@ const renderApp = ()=>{
 firebase.auth().onAuthStateChanged(user=>{
     if(user){
         console.log("Login");
+        console.log("user",user.displayName);
         store.dispatch(actions.login(user.uid));
         renderApp();
         if(history.location.pathname ==='/'){
